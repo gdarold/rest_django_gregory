@@ -10,4 +10,5 @@ class AtracaoViewSet(ModelViewSet):
     """
     queryset = Atracao.objects.all()
     serializer_class = AtracoesSerializer
+    filter_fields = ('nome', 'descricao')
 
