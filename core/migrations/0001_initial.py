@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
                 ('nome', models.CharField(max_length=150)),
                 ('descricao', models.TextField()),
                 ('aprovado', models.BooleanField(default=False)),
-                ('foto', models.ImageField(blank=True, null=True, upload_to='pontos_turisticos')),
+                ('foto', models.ImageField(blank=True, null=True, upload_to='pontos-turistas')),
                 ('atracoes', models.ManyToManyField(to='atracoes.Atracao')),
                 ('avaliacoes', models.ManyToManyField(to='avaliacoes.Avaliacao')),
                 ('comentarios', models.ManyToManyField(to='comentarios.Comentario')),
