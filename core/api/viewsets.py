@@ -1,5 +1,7 @@
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
+from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly, DjangoModelPermissions
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
@@ -15,6 +17,10 @@ class PontoTuristicoViewSet(ModelViewSet):
     serializer_class = PontoTuristicoSerializer
     #queryset = PontoTuristico.objects.filter(aprovado=True)
     filter_backends = [SearchFilter]
+    permission_classes = [IsAuthenticatedOrReadOnly,]
+    #permission_classes = [DjangoModelPermissions,]
+
+    authentication_classes = (TokenAuthentication,)
     search_fields = ['nome', 'descricao', 'endereco__linha1']
     #lookup_field = 'nome'#altera compotamento padrão de busco # campo tem que ser unico para funcionar
 
