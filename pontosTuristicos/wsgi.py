@@ -1,5 +1,5 @@
 """
-WSGI config for pontos-turistas project.
+WSGI config for pontosTuristicos project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -12,7 +12,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 from dj_static import Cling
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pontos-turistas.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pontosTuristicos.settings')
 
 #application = get_wsgi_application()
 

@@ -1,1 +1,1 @@
-web: gunicorn pontos-turistas.wsgi --log-file - # Needed to login by username in Django admin, regardless of `allauth`
+web: gunicorn pontosTuristicos.wsgi --log-file - # Needed to login by username in Django admin, regardless of `allauth`
