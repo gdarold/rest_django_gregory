@@ -1,0 +1,1 @@
+web: gunicorn rest.wsgi --log-file - # Needed to login by username in Django admin, regardless of `allauth`
